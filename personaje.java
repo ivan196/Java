@@ -3,22 +3,30 @@ package juegoprueba;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+
 import javax.swing.*;
 
 
 public class personaje extends JPanel implements ActionListener, KeyListener {
 
+	
+	
 	//declarar controles a usar y definir valor
-	Timer tiempo = new Timer(20,this);
+	Timer tiempo = new Timer(3,this);
 	int x = 0, y = 0, velX = 0, velY = 0;
+	Image imagen;
 	
 	
 	public personaje(){
+		
+		
 		
 		tiempo.start();
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
+		
 				
 	}
 	
@@ -92,7 +100,27 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 	
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+		
+int b = e.getKeyCode();
+        
+        if(b == KeyEvent.VK_LEFT){
+            velX = 0;
+            velY = 0;
+        }
+            
+        if(b == KeyEvent.VK_UP){
+            velX = 0;
+            velY = 0;
+        }
+        if(b == KeyEvent.VK_RIGHT){
+            velX = 0;
+            velY = 0;
+        }
+        if(b == KeyEvent.VK_DOWN){
+            velX = 0;
+            velY = 0;
+        }
+		
 		
 	}
 	
