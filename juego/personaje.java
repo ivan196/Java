@@ -1,5 +1,5 @@
+package JuegoPrueba;
 
-package juegoprueba;
 
 
 import java.awt.*;
@@ -16,11 +16,12 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 	
 	//declarar controles a usar y definir valor
         //tambien se define la ruta de donde se selecciona la imagen
-	Timer tiempo = new Timer(3,this);
+	Timer tiempo = new Timer(6,this);
 	int x = 0, y = 0, velX, velY;
 	Image imagen;
 	
 	File ruta = new File("link.png");
+        
         
         
         
@@ -54,7 +55,15 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 		//g.setColor(Color.GREEN);
 		//g.fillRect(x, y, 50, 40);
                 
-                g.drawImage(imagen, x,y,30,30, null);
+                
+               //ImageIcon fondo = new ImageIcon(new ImageIcon(getClass().getResource("mapazelda.jpg")).getImage());
+                
+               //g.drawImage(fondo.getImage(),0,0 ,1280,720, null);
+                
+                
+                g.drawImage(imagen, x,y,100,100, null);
+                
+                
 		
 	}
 	
@@ -120,19 +129,59 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 		int b = e.getKeyCode();
         
         if(b == KeyEvent.VK_LEFT){
+            
+            File ruta = new File("izq2.png");
+            
+            try{
+			imagen = ImageIO.read(ruta);
+		}
+		catch(IOException a){
+			System.out.println("No se encunetra la imagen");
+		}
+            
             velX = -1;
             velY = 0;
         }
             
         if(b == KeyEvent.VK_UP){
+            
+            File ruta = new File("arr2.png");
+            
+            try{
+			imagen = ImageIO.read(ruta);
+		}
+		catch(IOException a){
+			System.out.println("No se encunetra la imagen");
+		}
+
             velX = 0;
             velY = -1;
         }
         if(b == KeyEvent.VK_RIGHT){
+            
+            File ruta = new File("der2.png");
+            
+            try{
+			imagen = ImageIO.read(ruta);
+		}
+		catch(IOException a){
+			System.out.println("No se encunetra la imagen");
+		}
+            
             velX = 1;
             velY = 0;
         }
         if(b == KeyEvent.VK_DOWN){
+            
+            File ruta = new File("fren2.png");
+            
+            try{
+			imagen = ImageIO.read(ruta);
+		}
+		catch(IOException a){
+			System.out.println("No se encunetra la imagen");
+		}
+            
             velX = 0;
             velY = 1;
         }
@@ -152,19 +201,25 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
         int b = e.getKeyCode();
         
         if(b == KeyEvent.VK_LEFT){
+          
+            
+            
             velX = 0;
             velY = 0;
         }
             
         if(b == KeyEvent.VK_UP){
+                                   
             velX = 0;
             velY = 0;
         }
         if(b == KeyEvent.VK_RIGHT){
+                        
             velX = 0;
             velY = 0;
         }
         if(b == KeyEvent.VK_DOWN){
+                        
             velX = 0;
             velY = 0;
         }
