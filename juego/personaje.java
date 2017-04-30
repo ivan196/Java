@@ -35,7 +35,8 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
 		
-                //es una excecion que dice si no encuentra la imagen da un aviso de que no ha encontrado la imagen
+                /* esto es una excepcion(aviso)
+                para dar un aviso por si no encuentra la imagen */
                 try{
 			imagen = ImageIO.read(ruta);
 		}
@@ -129,8 +130,14 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
 		int b = e.getKeyCode();
         
         if(b == KeyEvent.VK_LEFT){
+        
+            //aqui he puesto imagenes para hiciera los movimientos de andar
+            //en esta imagen camina hacia la izquierda
             
             File ruta = new File("izq2.png");
+            
+            /* esto es una excepcion(aviso)
+            para dar un aviso por si no encuentra la imagen */
             
             try{
 			imagen = ImageIO.read(ruta);
@@ -145,8 +152,14 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
             
         if(b == KeyEvent.VK_UP){
             
+            //en esta imagen camina hacia arriba
+            
             File ruta = new File("arr2.png");
             
+            
+            /* esto es una excepcion(aviso)
+            para dar un aviso por si no encuentra la imagen */
+          
             try{
 			imagen = ImageIO.read(ruta);
 		}
@@ -159,8 +172,13 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
         }
         if(b == KeyEvent.VK_RIGHT){
             
+            
+            //en esta otra camina hacia la derecha
             File ruta = new File("der2.png");
             
+            
+            /* esto es una excepcion(aviso)
+            para dar un aviso por si no encuentra la imagen */
             try{
 			imagen = ImageIO.read(ruta);
 		}
@@ -173,8 +191,12 @@ public class personaje extends JPanel implements ActionListener, KeyListener {
         }
         if(b == KeyEvent.VK_DOWN){
             
+            //en esta imagen camina de frente            
             File ruta = new File("fren2.png");
             
+            
+            /* esto es una excepcion(aviso)
+            para dar un aviso por si no encuentra la imagen */
             try{
 			imagen = ImageIO.read(ruta);
 		}
